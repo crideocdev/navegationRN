@@ -1,10 +1,16 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
+import { HambugerMenu } from '../../components/shared/HambugerMenu'
+import IonIcon from '../../components/shared/IonIcon'
+
+
+
 
 const Tab1Screen = () => {
   return (
     <View>
-      <Text>Tab1Screen</Text>
+      <HambugerMenu/>
+      <IonIcon name={'rocket-outline'} color={'red'}/>
     </View>
   )
 }

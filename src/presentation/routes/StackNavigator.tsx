@@ -3,6 +3,8 @@ import HomeScreen from "../screen/home/HomeScreen";
 import ProductsScreen from "../screen/products/ProductsScrenn";
 import SettingsScreen from "../screen/settings/SettingsScreen";
 import ProductScreen from "../screen/products/ProductScreen";
+import { useNavigation } from "@react-navigation/native";
+import { useEffect } from "react";
 
 export type RootStackParams = {
   Home: undefined;
@@ -15,6 +17,15 @@ export type RootStackParams = {
 const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {
+
+  const navigator = useNavigation();
+
+  useEffect(() => {
+    navigator.setOptions({
+      headerShown: false,
+    })
+  }, [])
+  
   return (
     <Stack.Navigator screenOptions={{
         headerShown: true,

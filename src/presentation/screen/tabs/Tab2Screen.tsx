@@ -1,10 +1,11 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import { HambugerMenu } from '../../components/shared/HambugerMenu'
 
 const Tab2Screen = () => {
   return (
     <View>
-      <Text>Tab2Screen</Text>
+      <HambugerMenu/>
     </View>
   )
 }
